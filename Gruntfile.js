@@ -310,7 +310,7 @@ module.exports = function (grunt) {
                     dest: '<%= config.dist %>',
                     src: [
                         '*.{ico,png,txt}',
-                        '.htaccess',
+                       // '.htaccess',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*',
