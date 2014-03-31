@@ -1,3 +1,5 @@
+@import "compass";
+
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 // bower:scss
@@ -5,34 +7,16 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 // endbower
 
-@font-face {
-    font-family: "Gill_Sans_CE";
-     src: url("fonty/Gill_Sans_CE.ttf");
-     font-family: "Gill_Sans_UB";
-     src: url("fonty/Gill_Sans_UB.ttf");
- }
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500);
 
 * {
-  font-family: "Gill_Sans_CE", "Geneva CE", "Arial CE", sans-serif;
+  font-family: 'Roboto', sans-serif;;
 }
-h1 {font-family: "Gill_Sans_UB";
-}
-h2 {font-family: "Gill_Sans_UB";
-  font-size: 7em;
-  color: #EC1651;
-  text-shadow: 5px 5px 5px #FFFCE5;
-  padding-top: 15px;
 
-}
 body {
-    background-color: #FFFCE5;
-    color: #000000;
+    background-color: #ffffff;
 }
-#rzstav {background-color: #E8E4D1;
-    width: 100%;
-    img {width: 200px;
-    }
-}
+
 #reference{background-color: #E8E4D1;
     width: 100%;
     img {width: 200px;
@@ -41,14 +25,42 @@ body {
 .footer {background-color: #E8E4D1;
     width: 100%;     
     color: #EC1651;
-    text-shadow: 5px 5px 5px #FFFCE5;
+    @include text-shadow(5px 5px 5px #FFFCE5);
     font-size: 2em;
     padding-top: 10px;
 }
-.nav a {font-size: 3em;
-    color: #000000;
+
+
+.nav {
+  background-color: #231f20;
+  padding-top: 4em;
+    a {font-size: 1.5em;
+    color: #ffffff;
+    padding-left: 2em;
+  }
+  img {
+    height: 4em;
+    padding-bottom: 2em;
+  }
+
 }
-.container {
-  padding-top: 2em;
-  padding-bottom: 2em;
+#image-container {
+  padding: 0em;
+  img {
+    width: 100%;
+  }
+
+}
+#article-container {
+  background-color: #93c1d9;
+  color: #ffffff;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  article {
+    font-size: 1.2em;
+  }
+}
+h1 {
+  font-size: 4em;
+  font-weight: 1000;
 }
