@@ -22,7 +22,7 @@ h1 {
     font-family: 'Krona One', sans-serif;
 }
 h2 {
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 700;
     font-family: 'Krona One', sans-serif;
 }
@@ -83,7 +83,7 @@ p {
     padding-bottom: 3em;
     @include text-shadow(1px -1px 1px nth($color, 6));
     img {
-        width: 500px;
+        width: 350px;
     }
     h1{
         padding-left: 15px;
