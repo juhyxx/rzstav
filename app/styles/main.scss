@@ -8,7 +8,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500);
-$color: #93c1d9, #ed1651, #211f24, #ffffff;
+$color: #93c1d9, #ed1651, #211f24, #ffffff, #000000;
 @import "palette";
 @include palette($color);
 
@@ -34,7 +34,7 @@ p {
         font-size: 1.5em;
         color: nth($color, 4);
         padding-left: 2em;
-        @include text-shadow(0 -1px 1px black);
+        @include text-shadow(0 -1px 4px black);
         line-height: 5em;
     }
     img {
@@ -86,11 +86,16 @@ p {
     color: nth($color, 4);
     padding-top: 3em;
     padding-bottom: 3em;
+    border-top: 1em solid;
+    border-color: nth($color, 2);
     .row {
         margin-right: 40px;
         font-size: 1.6em;
     }
-    p {
-        padding-left: 4em;
+    .text-center {
+        padding-left: 3em;
+    } 
+    h1{
+        margin-bottom: 30px;
     }
 }
