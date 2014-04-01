@@ -4,10 +4,13 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 // bower:scss
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
-
 // endbower
 
+
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500);
+$color: #E8E4D1, #E6F0FC, #CBD2DC, #f80d0a, #3e3e3e, #cadae7;
+@import "palette";
+@include palette($color);
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -26,7 +29,7 @@ body {
 }
 
 .footer {
-    background-color: #E8E4D1;
+    background-color: nth($color, 1);
     width: 100%;
     color: #EC1651;
     @include text-shadow(5px 5px 5px #fffce5);
