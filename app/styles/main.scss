@@ -7,35 +7,42 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 // endbower
 
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500);
+@import url(http://fonts.googleapis.com/css?family=Krona+One);
+@import url(http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);
 $color: #93c1d9, #ed1651, #211f24, #ffffff, #000000;
 @import "palette";
 @include palette($color);
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Sorts Mill Goudy', serif;
 }
 h1 {
     font-size: 4em;
-    font-weight: 700;
+    font-weight: 900;
+    font-family: 'Krona One', sans-serif;
 }
 h2 {
     font-size: 1.6em;
-    font-weight: 500;
+    font-weight: 700;
+    font-family: 'Krona One', sans-serif;
 }
-p {
-    font-size: 1.2em;
-    font-weight: 400;
-}
+
 .nav {
     background-color: nth($color, 3);
     padding-top: 1em;
     a {
         font-size: 1.5em;
         color: nth($color, 4);
-        padding-left: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 2em;
         @include text-shadow(0 -1px 4px black);
         line-height: 5em;
+        font-family: 'Krona One', sans-serif;
+        text-decoration: none;
+        &:hover {
+            background-color: nth($color, 1);
+        }
     }
     img {
         height: 7em;
@@ -86,8 +93,9 @@ p {
     color: nth($color, 4);
     padding-top: 3em;
     padding-bottom: 3em;
-    border-top: 1em solid;
+    border-top: 5px solid;
     border-color: nth($color, 2);
+    @include box-shadow(0 -5px 0px black);
     .row {
         margin-right: 40px;
         font-size: 1.6em;
