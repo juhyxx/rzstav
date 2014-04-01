@@ -9,7 +9,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 @import url(http://fonts.googleapis.com/css?family=Krona+One);
 @import url(http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);
-$color: #93c1d9, #ed1651, #211f24, #ffffff, #000000;
+$color: #93c1d9, #ed1651, #211f24, #ffffff, #000000, #999276;
 @import "palette";
 @include palette($color);
 
@@ -26,23 +26,30 @@ h2 {
     font-weight: 700;
     font-family: 'Krona One', sans-serif;
 }
+p {
+    font-size: 1.3em;
+    }
 
 .nav {
     background-color: nth($color, 3);
     padding-top: 1em;
-    a {
+    ul a {
         font-size: 1.5em;
         color: nth($color, 4);
         padding-left: 1em;
         padding-right: 1em;
         padding-top: 2em;
-        @include text-shadow(0 -1px 4px black);
+        padding-bottom: 22px;
+        @include text-shadow(1px -1px 4px nth($color, 5));
         line-height: 5em;
         font-family: 'Krona One', sans-serif;
         text-decoration: none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         &:hover {
             background-color: nth($color, 1);
         }
+
     }
     img {
         height: 7em;
@@ -55,6 +62,7 @@ h2 {
 
 #image-container {
     padding: 0em;
+    margin-top: 7em;
     img {
         width: 100%;
     }
@@ -65,13 +73,15 @@ h2 {
     color: nth($color, 4);
     padding-top: 3em;
     padding-bottom: 3em;
+    @include text-shadow(1px -1px 1px nth($color, 6));
 }
 
 #reference-container {
     background-color: nth($color, 4);
-    color: nth($color, 3);
+    color: nth($color, 1);
     padding-top: 3em;
     padding-bottom: 3em;
+    @include text-shadow(1px -1px 1px nth($color, 6));
     img {
         width: 500px;
     }
@@ -96,6 +106,7 @@ h2 {
     border-top: 5px solid;
     border-color: nth($color, 2);
     @include box-shadow(0 -5px 0px black);
+    @include text-shadow(1px -1px 4px nth($color, 5));
     .row {
         margin-right: 40px;
         font-size: 1.6em;
@@ -106,4 +117,8 @@ h2 {
     h1{
         margin-bottom: 30px;
     }
+}
+.odsazeni {
+    margin-top: 129px;
+    background-color: transparent;
 }
