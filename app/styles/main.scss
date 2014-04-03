@@ -60,7 +60,10 @@ p {
 
 #image-container {
     padding: 0em;
-    margin-top: 110px;
+    padding-top: 110px;
+    img {
+        width: 100%
+    }
 }
 
 #article-container {
@@ -72,7 +75,7 @@ p {
     }
 }
 
-#reference-container {
+/*#reference-container {
     background-color: nth($color, 4);
     color: nth($color, 1);
     padding-top: 3em;
@@ -92,7 +95,7 @@ p {
     p {
         margin-bottom: 20px;
     }
-}
+}*/
 
 #footer-container {
     background-color: nth($color, 3);
@@ -117,4 +120,23 @@ p {
 .odsazeni {
     margin-top: 90px;
     background-color: transparent;
+}
+
+#reference-container {
+    background-color: nth($color, 4);
+    color: nth($color, 3);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    h1{
+        padding-left: 15px;
+        margin-bottom: 30px;
+        @include text-shadow(0 -1px 4px nth($color, 6));
+    }
+    img {
+        width: 600px;
+        
+    }
+    #carousel-reference {
+        width: 600px;
+    }
 }
