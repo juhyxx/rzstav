@@ -1,6 +1,6 @@
 @import "compass";
 
-$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 // bower:scss
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
@@ -8,13 +8,14 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 
 @import url(http://fonts.googleapis.com/css?family=Krona+One);
-@import url(http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 $color: #93c1d9, #ed1651, #211f24, #ffffff, #000000, #999276;
 @import "palette";
 @include palette($color);
 
+
 * {
-    font-family: 'Sorts Mill Goudy', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 h1 {
     font-size: 4em;
@@ -27,44 +28,66 @@ h2 {
     font-family: 'Krona One', sans-serif;
 }
 p {
-    font-size: 1.3em;
+    font-size: 1.2em;
     }
 
-.nav {
+.hidden-xs {
     background-color: nth($color, 3);
     padding-top: 1em;
     ul a {
-        font-size: 1.5em;
+        font-size: 1.2em;
         color: nth($color, 4);
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-top: 2em;
-        padding-bottom: 22px;
+        padding-left: 1.3em;
+        padding-right: 1.3em;
+        padding-top: 4em;
+        padding-bottom: 0.8em;
         @include text-shadow(1px -1px 4px nth($color, 5));
-        line-height: 5em;
+        line-height: 3.5em;
         font-family: 'Krona One', sans-serif;
         text-decoration: none;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
         &:hover {
-            background-color: nth($color, 1);
+            background-color: rgba(nth($color, 1),0.4);
+            @include text-shadow(1px -1px 4px nth($color, 6));
         }
 
     }
     img {
-        height: 7em;
+        height: 5.8em;
     }
     li {
-        margin-top: 2em;
-        margin-bottom: -2em;
+        margin-top: 2em;      
+    }
+}
+.visible-xs {
+    background-color: nth($color, 3);
+    .row {
+        padding-top: 3em;
+    }
+    ul{
+        line-height: 0px;
+     a {
+        color: nth($color, 4);
+        @include text-shadow(1px -1px 4px nth($color, 5));
+        font-family: 'Krona One', sans-serif;
+        text-decoration: none;
+        padding-bottom: 1em;
+        }
+    }
+    img {
+        height: 3em;
+        margin-bottom: 2em;
+    }
+    li {
+        margin-top: 3em;      
     }
 }
 
+
 #image-container {
     padding: 0em;
-    margin-top: 7em;
+    padding-top: 110px;
     img {
-        width: 100%;
+        width: 100%
     }
 }
 
@@ -73,52 +96,74 @@ p {
     color: nth($color, 4);
     padding-top: 3em;
     padding-bottom: 3em;
-    @include text-shadow(1px -1px 1px nth($color, 6));
+    h1 {@include text-shadow(1px -1px 1px nth($color, 6));
+    }
 }
 
 #reference-container {
     background-color: nth($color, 4);
-    color: nth($color, 1);
+    color: nth($color, 3);
     padding-top: 3em;
     padding-bottom: 3em;
-    @include text-shadow(1px -1px 1px nth($color, 6));
-    img {
-        width: 350px;
-    }
     h1{
         padding-left: 15px;
         margin-bottom: 30px;
+        @include text-shadow(0 -1px 4px nth($color, 6));
     }
-    h2 {
-        margin-top: 10px;
-        margin-bottom: 0px;
+    img {
+        width: 700px;
+        
     }
-    p {
-        margin-bottom: 20px;
+    #carousel-reference {
+        width: 700px;
     }
 }
 
-#footer-container {
-    background-color: nth($color, 3);
-    color: nth($color, 4);
-    padding-top: 3em;
-    padding-bottom: 3em;
-    border-top: 5px solid;
-    border-color: nth($color, 2);
-    @include box-shadow(0 -5px 0px black);
-    @include text-shadow(1px -1px 4px nth($color, 5));
-    .row {
-        margin-right: 40px;
-        font-size: 1.6em;
-    }
-    .text-center {
-        padding-left: 3em;
-    } 
-    h1{
-        margin-bottom: 30px;
+
+.hidden-xs {
+    #footer-container {
+        background-color: nth($color, 3);
+        color: nth($color, 4);
+        padding-top: 3em;
+        padding-bottom: 3em;
+        border-top: 5px solid;
+        border-color: nth($color, 2);
+        @include box-shadow(0 -5px 0px black);
+        @include text-shadow(1px -1px 4px nth($color, 5));
+        .row {
+            margin-right: 40px;
+            font-size: 1.6em;
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+        }
     }
 }
+.visible-xs {
+    #footer-containe {
+        background-color: nth($color, 3);
+        color: nth($color, 4);
+        padding-top: 3em;
+        padding-bottom: 3em;
+        border-top: 5px solid;
+        border-color: nth($color, 2);
+        @include box-shadow(0 -5px 0px black);
+        @include text-shadow(1px -1px 4px nth($color, 5));
+        .row {
+            margin-right: 40px;
+            font-size: 1.6em;
+        }
+        
+        h1{
+            margin-bottom: 30px;
+            font-size: 3em;
+        }
+    }
+}
+
 .odsazeni {
-    margin-top: 129px;
+    margin-top: 90px;
     background-color: transparent;
 }
+
