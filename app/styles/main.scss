@@ -62,7 +62,7 @@ p {
     .visible-xs {
         background-color: nth($color, 3);
         ul {
-            width: 230px;
+            
                 a {
                     color: nth($color, 4);
                     @include text-shadow(1px -1px 4px nth($color, 5));
