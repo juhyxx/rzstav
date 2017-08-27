@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Kanit:900');
 
 $colorRed: #ed114e;
+$colorBlack: #231f20;
+$colorGray: lighten($colorBlack, 20%);
 body {
 	font-family: 'Comfortaa', cursive;
 }
@@ -14,6 +16,11 @@ header {
 		font-weight: bold;
 	}
 }
+section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
 
 @media screen  {
 html {
@@ -21,7 +28,7 @@ html {
 }
 
 body {
-	color: gray;
+	color: $colorGray;
 	margin: 0;
 	padding:0;
 	display: flex;
@@ -29,8 +36,9 @@ body {
 }
 ul {
 	line-height: 2rem;
-	padding-left: 3rem;
+	padding-left: 1rem;
 	list-style: none;
+	margin-top: 0;
 	li {
 		&:before {
 			content: '-';
@@ -38,6 +46,10 @@ ul {
 			margin-right: 0.5rem;
 		}
 	}
+}
+p {
+	margin-top: 0;
+	line-height: 2rem;
 }
 
 
@@ -62,35 +74,35 @@ h2 {
 	font-family: 'Kanit', cursive;
 }
 b {
-	color:darken(gray, 15%);
+	color:$colorBlack;
+}
+.fa {
+	color: $colorRed;
 }
 
 article {
 	margin-bottom: 4rem;
 	padding-bottom: 2rem;
-	border-bottom: 1px dashed rgba($colorRed, 0.3);
 
 	&:last-child {
 		border: 0;
 		margin: 0;
 		padding: 0;
 		min-height: 100vh;
-		ul {
-			list-style: none;
-			li:before {
-				content: '';
-			}
-			padding: 0;
+		div {
+			line-height: 2rem;
 		}
 	}
 
 	h2 {
 		text-transform: uppercase;
+		border-bottom: 1px solid $colorBlack;
+		margin-bottom: 0.5rem;
 	}
 }
 
 footer {
-	background: black;
+	background: $colorBlack;
 	color: white;
 	display: flex;
 	flex-direction: row;
@@ -105,4 +117,5 @@ header {
 	justify-content: center;
 	margin-bottom: 2rem;
 }
+
 }
