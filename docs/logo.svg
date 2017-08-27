@@ -11,7 +11,7 @@
 
 	   .black {
 	   color: #231f20;
-	   	animation: rotate 4s ease;
+	   	animation: moveUp 1.5s ease-in;
 		transform-origin: center center;
 	   }
 	   .arrow-black {
@@ -20,35 +20,36 @@
 
 	   }
 	   .arrow-red {
-	   animation: moveUp 1.5s  ease-in;
+	   	animation: moveDown 1.5s  ease-in;
 	   	 fill: #ed114e;
 
 	   }
 
+	  @keyframes moveDown {
+		  0% {
+		  transform: translateY(-15px);
+		  }
+		  100% {
+		    transform: translateY(0);
+		  }
+	  }
 	  @keyframes moveUp {
-	  0% {
-	  transform: translateY(-15px);
-	  }
-	  100% {
-	    transform: translateY(0);
-	  }
+		  0% {
+		  transform: translateY(15px);
+		  }
+		  100% {
+		    transform: translateY(0);
+		  }
 	  }
 	  @keyframes moveLeft {
-	  0% {
-	  	transform: translateX(15px);
+		  0% {
+		  	transform: translateX(15px);
+		  }
+		  100% {
+		    transform: translateX(0);
+		  }
 	  }
-	  100% {
-	    transform: translateX(0);
-	  }
-	  }
-	  @keyframes rotate {
-	  0% {
-	  	transform: rotateX(90deg);
-	  }
-	  100% {
-	    transform: rotateX(0);
-	  }
-	  }
+
 
 
    </style>
