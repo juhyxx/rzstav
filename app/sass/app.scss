@@ -4,11 +4,15 @@ $colorRed: #ed114e;
 body {
 	font-family: 'Comfortaa', cursive;
 }
-
 #logo {
 	width: 100%;
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+header {
+	h1 {
+		font-weight: bold;
+	}
 }
 
 @media screen  {
