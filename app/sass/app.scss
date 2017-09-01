@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Kanit:900');
-
+@import url( 'https://fonts.googleapis.com/css?family=Comfortaa|Kanit:900');
 $colorRed: #ed114e;
 $colorBlack: #231f20;
 $colorGray: lighten($colorBlack, 20%);
-
 body {
 	font-family: 'Comfortaa', cursive;
 }
@@ -26,17 +24,18 @@ section {
 		white-space: nowrap;
 	}
 }
-
-@media screen  {
+@media screen {
 	html {
-	  font-size: 2vw;
+		font-size: 180%;
+		scroll-behavior: smooth;
+		@media screen and (max-width: 769px) {
+			font-size: 100%;
+		}
 	}
-
 	body {
 		color: $colorGray;
-		margin: 0;
 		margin: 0 1rem;
-		padding:0;
+		padding: 0;
 		display: flex;
 		flex-direction: column;
 	}
@@ -58,11 +57,10 @@ section {
 		margin-bottom: 0;
 		line-height: 2rem;
 	}
-
-
 	main {
 		max-width: 1200px;
 		margin: auto;
+		border-bottom: 10px solid $colorRed;
 	}
 	a {
 		text-decoration: none;
@@ -71,43 +69,40 @@ section {
 			text-decoration: underline;
 		}
 	}
-	h1, h2 {
+	h1,
+	h2 {
 		padding: 0;
 		margin: 0;
 	}
 	h2 {
-		color:$colorRed;
+		color: $colorRed;
 		font-weight: normal;
 		font-family: 'Kanit', cursive;
 	}
 	b {
-		color:$colorBlack;
+		color: $colorBlack;
 	}
 	.fa {
 		color: $colorRed;
 	}
-
 	article {
 		margin-bottom: 4rem;
+		padding-top: 3rem;
 		padding-bottom: 2rem;
-
+		min-height: 85vh;
 		&:last-child {
 			border: 0;
 			margin: 0;
-			padding: 0;
-			min-height: 100vh;
 			div {
 				line-height: 2rem;
 			}
 		}
-
 		h2 {
 			text-transform: uppercase;
-			border-bottom: 1px solid $colorBlack;
+			border-bottom: 5px solid $colorRed;
 			margin-bottom: 0.5rem;
 		}
 	}
-
 	footer {
 		background: $colorBlack;
 		color: white;
@@ -116,13 +111,24 @@ section {
 		justify-content: space-between;
 		padding: 1rem;
 	}
-
 	header {
-		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		margin-bottom: 2rem;
+		margin-top: 30vh;
 	}
-
+	nav {
+		margin-bottom: 30vh;
+		padding-top: 1rem;
+		top: 0; // required as well.
+		position: -webkit-sticky;
+		// required for Safari
+		position: sticky;
+		align-self: flex-start;
+		background-color: white;
+		box-shadow: 0 5px 35px 10px white;
+		a {
+			color: $colorGray;
+		}
+	}
 }
